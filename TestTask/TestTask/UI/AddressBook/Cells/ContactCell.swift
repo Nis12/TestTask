@@ -37,7 +37,7 @@ class ContactCell: UITableViewCell {
 	func setup(contact: ContactModel) {
 		avatarImageView.image = contact.avatar
 		nameLabel.text = "Имя: " + contact.name
-		phoneNumberLabel.text = "Номер: " + (contact.phoneNumbers.first ?? "")
+		phoneNumberLabel.text = "Номер: " + (contact.mainNumber?.value.stringValue ?? "")
 	}
 
 	private func setupUI() {

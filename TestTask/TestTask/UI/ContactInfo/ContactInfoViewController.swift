@@ -129,7 +129,7 @@ extension ContactInfoViewController: UITableViewDataSource {
 			return UITableViewCell()
 		}
 
-		cell.setup(phoneNumber: presenter.contact.phoneNumbers[indexPath.row])
+		cell.setup(phoneNumber: presenter.contact.phoneNumbers[indexPath.row].value.stringValue)
 
 		return cell
 	}

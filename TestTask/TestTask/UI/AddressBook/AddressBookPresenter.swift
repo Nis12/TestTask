@@ -71,9 +71,8 @@ class AddressBookPresenter: AddressBookPresenterProtocol {
 
 			let image = contact.thumbnailImageData == nil ? UIImage(named: "empty_image") : UIImage(data: contact.thumbnailImageData ?? Data())
 			let name = "\(contact.familyName) \(contact.givenName) \(contact.middleName)"
-			let phoneNumbers = contact.phoneNumbers.map { $0.value.stringValue }
 
-			return .init(avatar: image ?? UIImage(), name: name, phoneNumbers: phoneNumbers)
+			return .init(avatar: image ?? UIImage(), name: name, phoneNumbers: contact.phoneNumbers)
 		}
 	}
 }
