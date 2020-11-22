@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+protocol ContactInfoPresenterProtocol {
+	var contact: ContactModel { get }
+}
+
+class ContactInfoPresenter: ContactInfoPresenterProtocol {
+
+	var contact: ContactModel
+
+	init(contact: ContactModel) {
+		self.contact = contact
+	}
+}
